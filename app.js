@@ -1,19 +1,17 @@
+
+/* Llamada a appscript de google para visualizar google traer info de google sheet */
 const url =
   "https://script.googleusercontent.com/macros/echo?user_content_key=vnHuywflHe_zQofXqN3BUPCJnsdJP3B23mpAdv_0tjJDcKK3KiW2DmPbhppgRug3RtD2yK0QR5HFmYw3ZMXsT16Hut-jaHC9m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnNp7Wvz1S9DlOpYU-m7C4Af5uiiWsECooCstuXwhaamhlA1k8_lGmEnjiOFDwZjmmibMYSZXCy_C6ooBgau1i-yuB1F9lqGT7dz9Jw9Md8uu&lib=MFK4xC7y3sT0GDrArtd8YFwhvTfcvbrpA";
 
-const contenedorCarrito = document.querySelector("#descripcion tbody");
+const contenedorCarrito = document.querySelector("#descripcion tbody");/* Despliega info de JSON en table. */
 const agregarP = document.querySelector("#agregar tbody");
       
 let carrito = [
-    
-];
-
-function agregando() {
-            
-    
-   
   
-     console.log(carrito)
+];
+function agregando(i) {
+
+     console.log(i)
   } 
 
 
@@ -27,8 +25,6 @@ fetch(url)
     /* debugger */
     let pagina1 = 10;
     let i = 0;
-
-  
 
     ejecutar();
 
@@ -45,19 +41,15 @@ fetch(url)
         nombre:jsondata.data[i].Producto,
         medida:jsondata.data[i].Medida,
         precio:jsondata.data[i].Precio,
-        
+      
     }
         row.innerHTML = `
-        
-
-
-             <td><button onclick="agregando()" data-id="${articulos.id=i}" id="mas" class="btn btn-blue"><ion-icon size="large" name="add-circle-outline"></ion-icon></button>${
+      
+             <td><button onclick="agregando(${i})" data-id="${articulos.id=i}" id="mas" class="btn btn-blue"><ion-icon size="large" name="add-circle-outline"></ion-icon></button>${
          articulos.nombre
-        
-
+      
         } </td>
       
-
              <td>${articulos.medida} </td>
              <td>${articulos.precio} </td>
            
@@ -86,6 +78,12 @@ fetch(url)
 
       document.getElementById("btn").addEventListener("click", ejecutar);
     }
+
+
+
+
+
+
   });
 
   
