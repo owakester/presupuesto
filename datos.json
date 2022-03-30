@@ -1,0 +1,27 @@
+[
+  {
+      "nombre": "Escritorio Hawai",
+      "medida": "120x60x77 cm o 100x60x77 cm",
+      "Valor":  "$12000",
+      "imagen": "images/setmesa3.jpg"
+  },
+  {
+      "nombre": "Set california",
+      "medida": "Medidas Mesa: 56 cm alto x 58 cm ancho.",
+      "Valor":  "$18000",
+      "imagen": "images/setmesa.jpg"
+  },
+  {
+      "nombre": "Hamaca Millie con base",
+      "medida": "200x105x105 cm",
+      "Valor":  "$63000",
+      "imagen": "images/hamaca.jpg"
+  },
+
+  {
+      "nombre": "MESA TULIP TAPA NATURAL + 4 SILLAS",
+      "medida": "120x60x77 cm ",
+      "Valor":  "$35000",
+      "imagen": "images/setmesa1.jpg"
+  }
+]
