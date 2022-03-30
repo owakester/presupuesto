@@ -11,7 +11,10 @@ let carrito = [
 ];
 function agregando(i) {
 
-     console.log(i)
+  let hijos=document.getElementById("mas").parentElement.innerHTML
+ 
+  console.log( hijos.appendChild)
+
   } 
 
 
@@ -45,7 +48,7 @@ fetch(url)
     }
         row.innerHTML = `
       
-             <td><button onclick="agregando(${i})" data-id="${articulos.id=i}" id="mas" class="btn btn-blue"><ion-icon size="large" name="add-circle-outline"></ion-icon></button>${
+             <td><button onclick="agregando(${i})"data-id="${articulos.id=i}" id="mas" class="btn btn-blue"><ion-icon size="large" name="add-circle-outline"></ion-icon></button>${
          articulos.nombre
       
         } </td>
