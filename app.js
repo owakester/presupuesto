@@ -35,7 +35,7 @@ fetch(url)
     function ejecutar() {
       var table = $("#descripcion > tbody > tr > td ").remove();
       for (i; i < jsondata.data.length; i++) {
-        console.log("registros" + i);
+      /*   console.log("registros" + i); */
 
         const row = document.createElement("tr");
         const agregar = document.createElement("tr");
@@ -62,7 +62,7 @@ fetch(url)
              <td>${articulos.precio} </td>
            
         `;
-   console.log(carrito)
+   /* console.log(carrito) */
    carrito.push(articulos)
 
         contenedorCarrito.appendChild(row);
