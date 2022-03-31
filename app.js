@@ -11,13 +11,11 @@ let carrito = [
 ];
 function agregando(i) {
 
-  let hijos=document.getElementById("mas").parentElement.innerHTML
- 
-  console.log( hijos.appendChild)
+  let hAtribute=document.getElementById("mas").getAttribute("data-id").innerHTML=i;
 
+
+document.getElementById("prueba").innerHTML=hAtribute;
   } 
-
-
 
 fetch(url)
   .then((response) => {
