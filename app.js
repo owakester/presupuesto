@@ -9,13 +9,59 @@ const agregarP = document.querySelector("#agregar tbody");
 let carrito = [
   
 ];
+
+let listaProducto=[];
+let suma = 0;
+let ultimo=0;
+ultimo = listaProducto[listaProducto.length - 1]
+listaProducto.forEach(agregando);
+
+
+
 function agregando(i) {
 
-  let hijos=document.getElementById("mas").parentElement.innerHTML
- 
-  console.log( hijos.appendChild)
 
-  } 
+/* const existe =listaProducto.some(prodt=>{
+ 
+return prodt[i]
+
+})
+console.log(existe) */
+
+
+
+listaProducto.push(carrito[i].nombre, carrito[i].precio,carrito[i].id)
+
+
+
+
+
+
+/* console.log(listaProducto) */
+const row1 = document.createElement('tr');
+    
+      
+  row1.innerHTML = ` 
+  <td>${carrito[i].nombre} </td>
+  <td>$ ${carrito[i].precio} </td>
+  `;
+  suma= suma + carrito[i].precio;
+  let cantidad=0; 
+ 
+ 
+ 
+
+
+
+      
+
+  /*     console.log(suma) */
+      let total=document.querySelector("#total").textContent="$"+suma
+     agregarP.appendChild(row1); 
+    
+       
+}
+
 
 
 
@@ -64,8 +110,8 @@ fetch(url)
         agregarP.appendChild(agregar);
 
         if (i == pagina1) {
-          console.log(pagina1);
-
+         
+          i+=+1
           siguiente(pagina1);
           pagina1 = pagina1 + 10;
 
@@ -78,7 +124,7 @@ fetch(url)
 
     function siguiente(pagina1) {
       /*  console.log("hola  "+pagina1) */
-
+     
       document.getElementById("btn").addEventListener("click", ejecutar);
     }
 
