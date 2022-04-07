@@ -63,6 +63,7 @@ fetch(url)
       var table = $("#descripcion > tbody > tr > td ").remove();
       for (i; i < jsondata.data.length; i++) {
         const row = document.createElement("tr");
+        row.className="mitabla";
         const agregar = document.createElement("tr");
 
         let articulos = {
