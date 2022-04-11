@@ -13,34 +13,57 @@ let carrito = [];
 let listaProducto = [];
 let suma = 0;
 let ultimo = 0;
+let counts=0;
+
 ultimo = listaProducto[listaProducto.length - 1];
-listaProducto.forEach(agregando);
-
+/* listaProducto.forEach(agregando); */
 function agregando(i) {
-  /* const existe =listaProducto.some(prodt=>{
- 
-return prodt[i]
 
-})
-console.log(existe) */
+listaProducto.push({producto1:carrito[i].nombre, precio1:carrito[i].precio, id1:carrito[i].id});
+let lastid=listaProducto[listaProducto.length-1].id1
 
-  listaProducto.push(carrito[i].nombre, carrito[i].precio, carrito[i].id);
 
-  /* console.log(listaProducto) */
+
+counts = carrito[i].id;
+
+if (lastid===listaProducto.some(item=>item.id1)) {
+  console.log(lastid+"se encuentra en"+counts)
+} else {
+  console.log("no se encuentra")
+}
+
+
+console.log(counts)
+
+
   const row1 = document.createElement("tr");
 
   row1.innerHTML = ` 
+  <td>${carrito[i].id} </td>
   <td>${carrito[i].nombre} </td>
   <td>$ ${carrito[i].precio} </td>
   `;
   suma = suma + carrito[i].precio;
   let cantidad = 0;
 
+
+
+
+
+
   /*     console.log(suma) */
   let total = (document.querySelector("#total").textContent = "$" + suma);
-  console.log(total);
+/*   console.log(total); */
   agregarP.appendChild(row1);
+
+
+
+
+
 }
+
+
+
 
 /* function agregando(i) {
   let hAtribute = (document
@@ -79,7 +102,7 @@ fetch(url)
              <td>${articulos.medida} </td>
              <td>${articulos.precio} </td>
         `;
-        /* console.log(carrito) */
+     /*    console.log(articulos.nombre) */
         carrito.push(articulos);
         contenedorCarrito.appendChild(row);
         agregarP.appendChild(agregar);
